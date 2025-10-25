@@ -1,0 +1,558 @@
+<html>
+ <head>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <style>
+    @media (max-width: 767px) {
+      main.content aside {
+        margin-top: 1rem;
+      }
+      main.content h1{
+        font-size: 1.9rem;
+      }
+    }
+    @media (min-width: 768px){
+      header {
+        font-size: 1.5rem;
+        height: 90px;
+      }
+      main.content {
+        font-size: 1rem;
+      }
+      nav {
+        font-size: 1rem;
+      }
+      main.content h1{
+        font-size: 2rem;
+      }
+    }
+    @media (min-width: 767px) {
+      main.content {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+    @media (min-width: 575px){
+       nav section {
+          flex-direction: row;
+          gap: 3rem;
+          padding-left: 5%;
+       }
+       nav section h1 {
+         padding-left: 0;
+       }
+    }
+    @media (min-width: 992px){
+      header {
+        font-size: 2rem;
+        height: 90px;
+      }
+      .search-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .search-container input[type="text"] {
+            width: 300px;
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+            outline: none;
+        }
+
+        .search-container button {
+            padding: 12px 25px;
+            background-color: #008080;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: -45px;
+        }
+      main.content {
+        font-size: 1.4rem;
+      }
+      nav {
+        font-size: 1.4rem;
+      }
+      footer {
+        height: 20px;
+        font-size: 1.5rem;
+      }
+      main.content h1{
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+ </head>
+ <body class="bg-blue-100 font-roboto">
+   <div class="flex items-center space-x-2">
+    <i class="fas fa-signal text-white">
+    </i>
+    <i class="fas fa-wifi text-white">
+    </i>
+    <i class="fas fa-battery-full text-white">
+    </i>
+   </div>
+  </div>
+  <div class="bg-blue-400 p-4">
+    <h2 align="center" class="text-white text-xl font-bold">
+    Tempat Liburan Terpopuler Di Indonesia<div class="search-container">
+        <input type="text" id="searchInput" placeholder="Cari produk...">
+        <button type="button" onclick="searchProduct()">Cari</button>
+   </h2>
+   </div>
+   <br>
+  </div>
+  <div class="p-4">
+   <h1 class="text-black text-xl font-bold">
+    Hotel
+    </h1>
+    <br>
+   <div class="flex space-x-4 overflow-x-auto">
+    <div class="bg-white rounded-lg shadow-lg w-64">
+     <img alt="Hotel Indonesia Kempinski Jakarta" class="rounded-t-lg" height="144" src="1.jpg" width="256"/>
+     <div class="p-4">
+             <h3 class="text-lg font-bold mt-2">
+      Padma Resort Ubuda
+      </h3>
+      <div class="flex justify-between items-center">
+       <span class="text-gray-500">
+        Paling Hemat No. 1 dari 261 di Hotel Bintang 5 di Indonesia
+       </span>
+       <span class="bg-orange-500 text-white px-2 py-1 rounded-full text-xs">
+        Hemat 25%
+       </span>
+      </div>
+      <div class="flex items-center mt-2">
+       <span class="text-yellow-500">
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+       </span>
+       <span class="text-blue-600 ml-2">
+        9.0/10 (4831)
+       </span>
+      </div>
+      <div class="text-gray-500 line-through mt-2">
+       Rp 3.754.667
+      </div>
+      <div class="text-red-500 text-xl font-bold">
+       Rp 2.816.000
+      </div>
+      <br>
+     <div class="flex justify-center mt-4">
+       <a href="Transaksi.html">
+          <button class="bg-orange-600 text-white px-4 py-2 rounded-full">
+     >> Booking <<
+     </button>
+     </a>
+     </div>
+     </div>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg w-64">
+     <img alt="Savero Style Bogor" class="rounded-t-lg" height="144" src="2.jpg" width="256"/>
+     <div class="p-4">
+             <h3 class="text-lg font-bold mt-2">
+        The Kayon Jungle Resort
+      </h3>
+      <div class="flex justify-between items-center">
+       <span class="text-gray-500">
+        Paling Hemat No. 4 dari 261 di Hotel Bintang 5 di Indonesia
+       </span>
+       <span class="bg-orange-500 text-white px-2 py-1 rounded-full text-xs">
+        Hemat 25%
+       </span>
+      </div>
+      <div class="flex items-center mt-2">
+       <span class="text-yellow-500">
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+       </span>
+       <span class="text-blue-600 ml-2">
+        8.6/10 (5113)
+       </span>
+      </div>
+      <div class="text-gray-500 line-through mt-2">
+       Rp 546.000
+      </div>
+      <div class="text-red-500 text-xl font-bold">
+       Rp 409.500
+      </div>
+      <br>
+      <p>
+           <div class="flex justify-center mt-4">
+    <a href="Transaksi.html">
+       <button class="bg-orange-600 text-white px-4 py-2 rounded-full">
+     >> Booking <<
+     </button>
+     </div>
+     </a>
+     </p>
+     </div>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg w-64">
+     <img alt="Golden Boutique Hotel Kemayoran" class="rounded-t-lg" height="144" src="3.jpg" width="256"/>
+     <div class="p-4">
+             <h3 class="text-lg font-bold mt-2">
+       The Gaia Hotel Bandung
+      </h3>
+      <div class="flex justify-between items-center">
+       <span class="text-gray-500">
+        Paling Hemat No. 7 dari 261 di Hotel Bintang 5 di Indonesia
+       </span>
+       <span class="bg-orange-500 text-white px-2 py-1 rounded-full text-xs">
+        Hemat 25%
+       </span>
+      </div>
+      <div class="flex items-center mt-2">
+       <span class="text-yellow-500">
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+       </span>
+       <span class="text-blue-600 ml-2">
+        8.5/10 (4210)
+       </span>
+      </div>
+      <div class="text-gray-500 line-through mt-2">
+       Rp 545.000
+      </div>
+      <div class="text-red-500 text-xl font-bold">
+       Rp 409.500
+      </div>
+      <br>
+           <div class="flex justify-center mt-4">
+              <a href="Transaksi.html">
+    <button class="bg-orange-600 text-white px-4 py-2 rounded-full">
+     >> Booking <<
+     </button>
+     </a>
+     </div>
+     </div>
+    </div>
+        <div class="bg-white rounded-lg shadow-lg w-64">
+     <img alt="Golden Boutique Hotel Kemayoran" class="rounded-t-lg" height="144" src="4.jpg" width="256"/>
+     <div class="p-4">
+             <h3 class="text-lg font-bold mt-2">
+       GH Universal Hotel
+      </h3>
+      <div class="flex justify-between items-center">
+       <span class="text-gray-500">
+        Paling Hemat No. 10 dari 261 di Hotel Bintang 5 di Indonesia
+       </span>
+       <span class="bg-orange-500 text-white px-2 py-1 rounded-full text-xs">
+        Hemat 25%
+       </span>
+      </div>
+      <div class="flex items-center mt-2">
+       <span class="text-yellow-500">
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+       </span>
+       <span class="text-blue-600 ml-2">
+        8.5/10 (4210)
+       </span>
+      </div>
+      <div class="text-gray-500 line-through mt-2">
+       Rp 545.000
+      </div>
+      <div class="text-red-500 text-xl font-bold">
+       Rp 409.500
+      </div>
+      <br>
+           <div class="flex justify-center mt-4">
+              <a href="Transaksi.html">
+    <button class="bg-orange-600 text-white px-4 py-2 rounded-full">
+     >> Booking <<
+     </button>
+     </a>
+     </div>
+     </div>
+   </div>
+  </div>
+  <div class="bg--500 p-4">
+   <h1 class="text-black text-xl font-bold">
+    Wahana Air
+    </h1>
+   </div>
+   <div class="flex space-x-4 overflow-x-auto mt-4">
+    <div class="bg-white rounded-lg shadow-lg w-64">
+     <img alt="Dufan Ancol Tickets" class="rounded-t-lg" height="144" src="W1.jpg" width="256"/>
+     <div class="p-4">
+      <div class="flex justify-between items-center">
+       <span class="text-gray-500">
+        TIKET
+       </span>
+       <span class="bg-orange-500 text-white px-2 py-1 rounded-full text-xs">
+        Hemat 40%
+       </span>
+      </div>
+      <h3 class="text-lg font-bold mt-2">
+       Wahoo Waterworld
+      </h3>
+      <div class="flex items-center mt-2">
+       <span class="text-blue-600">
+        9.2/10 (18843)
+       </span>
+      </div>
+      <div class="text-gray-500 line-through mt-2">
+       Rp 150.000
+      </div>
+      <div class="text-red-500 text-xl font-bold">
+       Rp 95.000
+      </div>
+           <div class="flex justify-center mt-4">
+              <a href="Transaksi.html">
+                <br>
+    <button class="bg-orange-600 text-white px-4 py-2 rounded-full">
+     >> Beli Sekarang <<
+     </button>
+     </a>
+     </div>
+     </div>
+    </div>
+         <div class="bg-white rounded-lg shadow-lg w-64">
+     <img alt="Tiket Sea World Ancol" class="rounded-t-lg" height="144" src="W2.jpg" width="256"/>
+     <div class="p-4">
+      <div class="flex justify-between items-center">
+       <span class="text-gray-500">
+      TIKET
+       </span>
+       <span class="bg-orange-500 text-white px-2 py-1 rounded-full text-xs">
+        Hemat 20%
+       </span>
+      </div>
+      <h3 class="text-lg font-bold mt-2">
+       Hawai Waterpark Malang
+      </h3>
+      <div class="flex items-center mt-2">
+       <span class="text-blue-600">
+        9.1/10 (2295)
+       </span>
+      </div>
+      <div class="text-gray-500 line-through mt-2">
+       Rp 120.000
+      </div>
+      <div class="text-red-500 text-xl font-bold">
+       Rp 85.000
+      </div>
+                <div class="flex justify-center mt-4">
+             <a href="Transaksi.html">
+               <br>
+    <button class="bg-orange-600 text-white px-4 py-2 rounded-full">
+     >> Beli Sekarang <<
+     </button>
+     </a>
+     </div> 
+     </div>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg w-64">
+     <img alt="Tiket Sea World Ancol" class="rounded-t-lg" height="144" src="W3.jpg" width="256"/>
+     <div class="p-4">
+      <div class="flex justify-between items-center">
+       <span class="text-gray-500">
+      TIKET
+       </span>
+       <span class="bg-orange-500 text-white px-2 py-1 rounded-full text-xs">
+        Hemat 15%
+       </span>
+      </div>
+      <h3 class="text-lg font-bold mt-2">
+       The Jungle Waterpark
+      </h3>
+      <div class="flex items-center mt-2">
+       <span class="text-blue-600">
+        9.1/10 (2295)
+       </span>
+      </div>
+      <div class="text-gray-500 line-through mt-2">
+       Rp 120.000
+      </div>
+      <div class="text-red-500 text-xl font-bold">
+       Rp 80.000
+      </div>
+          <div class="flex justify-center mt-4">
+             <a href="Transaksi.html">
+               <br>
+    <button class="bg-orange-600 text-white px-4 py-2 rounded-full">
+     >> Beli Sekarang <<
+     </button>
+     </a>
+     </div> 
+     </div>
+    </div>
+     <div class="bg-white rounded-lg shadow-lg w-64">
+     <img alt="Tiket Sea World Ancol" class="rounded-t-lg" height="144" src="W4.jpg" width="256"/>
+     <div class="p-4">
+      <div class="flex justify-between items-center">
+       <span class="text-gray-500">
+      TIKET
+       </span>
+       <span class="bg-orange-500 text-white px-2 py-1 rounded-full text-xs">
+        Hemat 10%
+       </span>
+      </div>
+      <h3 class="text-lg font-bold mt-2">
+       Jogja Bay Pirates Adventure Waterpark
+      </h3>
+      <div class="flex items-center mt-2">
+       <span class="text-blue-600">
+        9.1/10 (2295)
+       </span>
+      </div>
+      <div class="text-gray-500 line-through mt-2">
+       Rp 120.000
+      </div>
+      <div class="text-red-500 text-xl font-bold">
+       Rp 75.000
+      </div>
+                <div class="flex justify-center mt-4">
+             <a href="Transaksi.html">
+    <button class="bg-orange-600 text-white px-4 py-2 rounded-full">
+     >> Beli Sekarang <<
+     </button>
+     <br>
+     </a>
+     </div> 
+      </div>
+   </div>
+  </div>
+  <br>
+   <h1 class="text-black text-xl font-bold">
+    Kapal Pesiar
+   </h1>
+   <div class="flex space-x-4 overflow-x-auto mt-4">
+    <div class="bg-white rounded-lg shadow-lg w-64">
+     <img alt="4D3N Ovation of the Seas: Singapore - Penang - Singapore" class="rounded-t-lg" height="144" src="P1.jpg" width="256"/>
+     <div class="p-4">
+      <div class="flex justify-between items-center">
+       <span class="text-gray-500">
+        TIKET
+       </span>
+      </div>
+      <h3 class="text-lg font-bold mt-2">
+       Kapal Wonder of the Seas
+      </h3>
+      <div class="text-red-500 text-xl font-bold">
+       Rp 1.195.320
+      </div>
+           <div class="flex justify-center mt-4">
+              <a href="Transaksi.html">
+                <br>
+    <button class="bg-orange-600 text-white px-4 py-2 rounded-full">
+     >> Beli Sekarang <<
+     </button>
+     </a>
+     </div>
+     </div>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg w-64">
+     <img alt="4D3N Anthem of the Seas: Singapore - Penang - Singapore" class="rounded-t-lg" height="144" src="P3.jpg" width="256"/>
+     <div class="p-4">
+      <div class="flex justify-between items-center">
+       <span class="text-gray-500">
+      TIKET
+       </span>
+      </div>
+      <h3 class="text-lg font-bold mt-2">
+       Kapal Symphony of the Seas
+      </h3>
+      <div class="text-red-500 text-xl font-bold">
+       Rp 1.100.320
+      </div>
+           <div class="flex justify-center mt-4">
+              <a href="Transaksi.htmll">
+    <button class="bg-orange-600 text-white px-4 py-2 rounded-full">
+     >> Beli Sekarang <<
+     </button>
+     </a>
+     </div>
+     </div>
+     </div>
+       <div class="bg-white rounded-lg shadow-lg w-64">
+     <img alt="4D3N Anthem of the Seas: Singapore - Penang - Singapore" class="rounded-t-lg" height="144" src="P2.jpg" width="256"/>
+     <div class="p-4">
+      <div class="flex justify-between items-center">
+       <span class="text-gray-500">
+        TIKET
+       </span>
+      </div>
+      <h3 class="text-lg font-bold mt-2">
+       Kapal Harmony of the Seas
+      </h3>
+      <div class="text-red-500 text-xl font-bold">
+       Rp 1.100.000
+      </div>
+           <div class="flex justify-center mt-4">
+              <a href="Transaksi.html">
+                <br>
+    <button class="bg-orange-600 text-white px-4 py-2 rounded-full">
+     >> Beli Sekarang <<
+     </button>
+     </a>
+     </div>
+    </div>
+   </div>    
+   <div class="bg-white rounded-lg shadow-lg w-64">
+     <img alt="4D3N Anthem of the Seas: Singapore - Penang - Singapore" class="rounded-t-lg" height="144" src="P4.jpg" width="256"/>
+     <div class="p-4">
+      <div class="flex justify-between items-center">
+       <span class="text-gray-500">
+        TIKET
+       </span>
+      </div>
+      <h3 class="text-lg font-bold mt-2">
+      Kapal Allure of the Seas
+      </h3>
+      <div class="text-red-500 text-xl font-bold">
+       Rp 950.000
+      </div>
+           <div class="flex justify-center mt-4">
+              <a href="Login.html">
+                <br>
+    <button class="bg-orange-600 text-white px-4 py-2 rounded-full">
+     >> Beli Sekarang <<
+     </button>
+     </a>
+     </div>
+     <script>
+        function searchProduct() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const productCards = document.querySelectorAll('.product-card');
+            let found = false;
+
+            productCards.forEach(card => {
+                const productName = card.getAttribute('data-name').toLowerCase();
+                if (productName.includes(input)) {
+                    card.style.display = 'inline-block';
+                    found = true;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        </script>
+ </body>
+</html>

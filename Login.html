@@ -1,0 +1,139 @@
+<html><head>
+<title>Halaman Login | Rinrin Fitriani</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: #fofofo;
+background-size: 100% 100%;
+	animation: gradient 10s ease infinite;
+	height: 100vh;}
+.container {
+     width: 300px;
+background-color: #ffffffc0;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+.login-form {
+     display: flex;
+flex-direction: column; }
+.form-group {
+    margin-bottom: 15px; }
+input[type="text"],
+input[type="password"] {
+padding: 10px;
+width: 100%;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-sizing: border-box; }
+button {
+      padding: 10px;
+background-color: #007bff;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+     button:hover {
+background-color: #005663;
+@media screen and (max-width: 480px) {
+.container {
+width: 90%;
+}
+}
+       @media (max-width: 767px) {
+      main.content aside {
+        margin-top: 1rem;
+      }
+      main.content h1{
+        font-size: 1.9rem;
+      }
+    }
+    @media (min-width: 768px){
+      header {
+        font-size: 1.5rem;
+        height: 90px;
+      }
+      main.content {
+        font-size: 1rem;
+      }
+      nav {
+        font-size: 1rem;
+      }
+      main.content h1{
+        font-size: 2rem;
+      }
+    }
+    @media (min-width: 767px) {
+      main.content {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+    @media (min-width: 575px){
+       nav section {
+          flex-direction: row;
+          gap: 3rem;
+          padding-left: 5%;
+       }
+       nav section h1 {
+         padding-left: 0;
+       }
+    }
+    @media (min-width: 992px){
+      header {
+        font-size: 2rem;
+        height: 90px;
+      }
+      main.content {
+        font-size: 1.4rem;
+      }
+      nav {
+        font-size: 1.4rem;
+      }
+      footer {
+        height: 20px;
+        font-size: 1.5rem;
+      }
+      main.content h1{
+        font-size: 2.5rem;
+      }
+    } 
+</style>
+</head>
+<body background="login.jpg">
+<div class="container">
+<form class="login-form" id="loginForm">
+<h2>Login</h2>
+<div class="form-group">
+<label for="username">Username</label>
+<input type="text" id="username" name="username" required>
+</div>
+<div class="form-group">
+<label for="password">Password</label>
+<input type="password" id="password" name="password" required>
+</div>
+<button type="submit">Login</button>
+</form>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function() { const loginForm = document.getElementById("loginForm");
+loginForm.addEventListener("submit", function (event) { event.preventDefault();
+const username = document.getElementById("username").value;
+const password = document.getElementById("password").value;
+if (username === "Rijwan" && password === "15092007") { sessionStorage.setItem("isLoggedIn", "true");
+window.location.href = "H.html";
+}
+else { alert("Username atau Password salah. Silakan coba lagi.");
+}
+});
+});
+</script>
+</body>
+</html>

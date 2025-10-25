@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Transaksi Barang</title>
+    <style>
+        /* Gaya umum untuk body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Gaya untuk tombol "Back" */
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            background-color: #d9534f;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #c12e2a;
+        }
+
+        /* Gaya umum untuk form transaksi */
+        .transaction-form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #f9f9f9;
+        }
+
+        .transaction-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #0cb5fe;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="tel"],
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .form-group select {
+            background-color: white;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0cb5fe;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #0cb5fe;
+        }
+
+        /* Gaya untuk kontainer pilihan bank */
+        .bank-options {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .bank-options img {
+            width: 80px;
+            margin: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .bank-options img:hover {
+            transform: scale(1.1);
+        }
+
+        .selected-bank {
+            text-align: center;
+            font-weight: bold;
+            color: #0cb5fe;
+            margin-top: 10px;
+        }
+               @media (max-width: 767px) {
+      main.content aside {
+        margin-top: 1rem;
+      }
+      main.content h1{
+        font-size: 1.9rem;
+      }
+    }
+    @media (min-width: 768px){
+      header {
+        font-size: 1.5rem;
+        height: 90px;
+      }
+      main.content {
+        font-size: 1rem;
+      }
+      nav {
+        font-size: 1rem;
+      }
+      main.content h1{
+        font-size: 2rem;
+      }
+    }
+    @media (min-width: 767px) {
+      main.content {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+    @media (min-width: 575px){
+       nav section {
+          flex-direction: row;
+          gap: 3rem;
+          padding-left: 5%;
+       }
+       nav section h1 {
+         padding-left: 0;
+       }
+    }
+    @media (min-width: 992px){
+      header {
+        font-size: 2rem;
+        height: 90px;
+      }
+      main.content {
+        font-size: 1.4rem;
+      }
+      nav {
+        font-size: 1.4rem;
+      }
+      footer {
+        height: 20px;
+        font-size: 1.5rem;
+      }
+      main.content h1{
+        font-size: 2.5rem;
+      }
+    } 
+    </style>
+</head>
+<body>
+
+<!-- Tombol Back di Luar Kotak Transaksi -->
+<a href="Halaman utama.html" class="back-button" onclick="goBack()">Kembali</a>
+
+<div class="transaction-form">
+    <h2>Tempat Untuk Membayar</h2>
+    <form action="Kirim.html" method="post">
+        <div class="form-group">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Alamat:</label>
+            <textarea id="address" name="address" rows="3" placeholder="Masukkan alamat Anda" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Nomor HP:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Masukkan nomor HP Anda" required>
+        </div>
+
+        <div class="form-group">
+            <label for="notes">Catatan:</label>
+            <textarea id="notes" name="notes" rows="2" placeholder="Catatan tambahan (opsional)"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="payment-method">Metode Pembayaran:</label>
+            <select id="payment-method" name="payment_method" required>
+                <option value="">Pilih metode pembayaran</option>
+                <option value="transfer">Transfer Bank</option>
+                <option value="credit">Kartu Kredit/Debit</option>
+                <option value="ewallet">E-Wallet</option>
+            </select>
+        </div>
+
+        <!-- Kontainer untuk pilihan bank -->
+        <div class="bank-options" id="bankOptions">
+            <label>Pilih Bank:</label>
+            <img src="bank bjb.jpg" alt="BCA" onclick="selectBank('BCA')">
+            <img src="bni.jpg" alt="BNI" onclick="selectBank('BNI')">
+            <img src="bca.jpg" alt="BRI" onclick="selectBank('BRI')">
+            <img src="mandiri.jpg" alt="Mandiri" onclick="selectBank('Mandiri')">
+        </div>
+
+        <div class="selected-bank" id="selectedBank"></div>
+
+        <div class="form-group">
+            <button type="submit">Buat Pesanan</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    // Tampilkan pilihan bank hanya jika metode pembayaran adalah "Transfer Bank"
+    document.getElementById('payment-method').addEventListener('change', function() {
+        const bankOptions = document.getElementById('bankOptions');
+        if (this.value === 'transfer') {
+            bankOptions.style.display = 'block';
+        } else {
+            bankOptions.style.display = 'none';
+            document.getElementById('selectedBank').innerText = ''; // Hapus pilihan bank jika metode berubah
+        }
+    });
+
+    // Fungsi untuk memilih bank
+    function selectBank(bankName) {
+        document.getElementById('selectedBank').innerText = `Bank yang dipilih: ${bankName}`;
+    }
+
+    // Fungsi untuk tombol "Back"
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+</body>
+</html>

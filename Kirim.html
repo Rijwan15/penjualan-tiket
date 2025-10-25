@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konfirmasi Transaksi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .confirmation-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #008080;
+            border-radius: 8px;
+            background-color: #e6fffa;
+            text-align: center;
+        }
+
+        .confirmation-container h2 {
+            color: #0cb5fe;
+            margin-bottom: 20px;
+        }
+
+        .confirmation-container button {
+            padding: 10px 20px;
+            background-color: #2cbbff;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .confirmation-container button:hover {
+            background-color: #005959;
+        }
+              @media (max-width: 767px) {
+      main.content aside {
+        margin-top: 1rem;
+      }
+      main.content h1{
+        font-size: 1.9rem;
+      }
+    }
+    @media (min-width: 768px){
+      header {
+        font-size: 1.5rem;
+        height: 90px;
+      }
+      main.content {
+        font-size: 1rem;
+      }
+      nav {
+        font-size: 1rem;
+      }
+      main.content h1{
+        font-size: 2rem;
+      }
+    }
+    @media (min-width: 767px) {
+      main.content {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+    @media (min-width: 575px){
+       nav section {
+          flex-direction: row;
+          gap: 3rem;
+          padding-left: 5%;
+       }
+       nav section h1 {
+         padding-left: 0;
+       }
+    }
+    @media (min-width: 992px){
+      header {
+        font-size: 2rem;
+        height: 90px;
+      }
+      main.content {
+        font-size: 1.4rem;
+      }
+      nav {
+        font-size: 1.4rem;
+      }
+      footer {
+        height: 20px;
+        font-size: 1.5rem;
+      }
+      main.content h1{
+        font-size: 2.5rem;
+      }
+    }  
+    </style>
+</head>
+<body>
+
+<div class="confirmation-container">
+    <h2>Paket Anda Terkirim</h2>
+
+    <button onclick="goToHomepage()">Kembali ke Beranda</button>
+</div>
+
+<script>
+    function goToHomepage() {
+        window.location.href = 'Halaman utama.html'; // Ganti 'index.html' dengan URL beranda Anda
+    }
+</script>
+
+</body>
+</html>
